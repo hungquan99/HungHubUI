@@ -650,14 +650,14 @@ function OrionLib:MakeWindow(WindowConfig)
 		UIHidden = true
 		OrionLib:MakeNotification({
 			Name = "Hung Hub Premium UI Hidden",
-			Content = "Tap L to reopen the UI",
+			Content = "Tap P to reopen the UI",
 			Time = 5
 		})
 		WindowConfig.CloseCallback()
 	end)
 
 	AddConnection(UserInputService.InputBegan, function(Input)
-		if Input.KeyCode == Enum.KeyCode.L and UIHidden then
+		if Input.KeyCode == Enum.KeyCode.P and UIHidden then
 			MainWindow.Visible = true
 		end
 	end)
@@ -665,7 +665,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	AddConnection(MinimizeBtn.MouseButton1Up, function()
 		if Minimized then
 			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, 615, 0, 344)}):Play()
-			MinimizeBtn.Ico.Image = "rbxassetid://7072719338"
+			MinimizeBtn.Ico.Image = "rbxassetid://14467433545"
 			wait(.02)
 			MainWindow.ClipsDescendants = false
 			WindowStuff.Visible = true
@@ -673,7 +673,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		else
 			MainWindow.ClipsDescendants = true
 			WindowTopBarLine.Visible = false
-			MinimizeBtn.Ico.Image = "rbxassetid://7072720870"
+			MinimizeBtn.Ico.Image = "rbxassetid://14467433545"
 
 			TweenService:Create(MainWindow, TweenInfo.new(0.5, Enum.EasingStyle.Quint, Enum.EasingDirection.Out), {Size = UDim2.new(0, WindowName.TextBounds.X + 140, 0, 50)}):Play()
 			wait(0.1)
