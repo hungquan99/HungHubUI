@@ -649,7 +649,7 @@ function OrionLib:MakeWindow(WindowConfig)
 		MainWindow.Visible = false
 		UIHidden = true
 		OrionLib:MakeNotification({
-			Name = "Hung Hub Premium UI Hidden",
+			Name = "Hung Hub UI Hidden",
 			Content = "Tap P to reopen the UI",
 			Time = 5
 		})
